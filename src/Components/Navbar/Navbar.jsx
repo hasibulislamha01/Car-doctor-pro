@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
+import logo from '@/assets/logo.svg'
+import Image from 'next/image';
+import ThemeButton from '../ThemeButton/ThemeButton';
 
 const Navbar = () => {
 
@@ -29,6 +32,7 @@ const Navbar = () => {
 
     return (
         <nav className=' bg-base-100'>
+
             <div className="container mx-auto navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -56,19 +60,35 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link href={'/'}>
+                        <Image
+                            src={logo}
+                            alt='logo'
+                            width={80}
+                            height={60}>
+                        </Image>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 flex items-center justify-center gap-4">
                         {
                             navItems?.map(items =>
-                                <Link href={items.link}>{items.title}</Link>
+                                <Link 
+                                key={items.link}
+                                href={items.link}
+
+                                >
+                                    {items.title}
+                                </Link>
                             )
                         }
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <ThemeButton
+                    name={'Appointment'}
+                    outlined={ true }
+                    ></ThemeButton>
                 </div>
             </div>
         </nav>
