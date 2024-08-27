@@ -21,7 +21,7 @@ const Banner = () => {
 
     const bannerItems = [
         {
-            image: banner1,
+            image: banner5,
             title: 'Affordable Price For Car Servicing',
             description: 'There are many variations of passages of available, but the majority have suffered alteration in some form'
         },
@@ -41,7 +41,7 @@ const Banner = () => {
             description: 'There are many variations of passages of available, but the majority have suffered alteration in some form'
         },
         {
-            image: banner5,
+            image: banner1,
             title: 'Affordable Price For Car Servicing',
             description: 'There are many variations of passages of available, but the majority have suffered alteration in some form'
         },
@@ -60,7 +60,7 @@ const Banner = () => {
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
-            className='w-full h-screen'
+            className='w-full h-screen lg:h-[500px]'
         >
             {
                 bannerItems?.map(item =>
@@ -70,7 +70,7 @@ const Banner = () => {
                         <div className='flex flex-col justify-center h-full  pl-6 text-white rounded-[10px]'
                             style={{
                                 background: `linear-gradient(90deg, rgb(21, 21, 21), rgba(21, 21, 21, 0) 100%), url(${item?.image.src})`,
-                                backgroundPosition: 'left',
+                                // backgroundPosition: 'left',
                                 backgroundSize: 'cover'
                             }}>
                             <div className='w-1/2 flex flex-col justify-center gap-6'>

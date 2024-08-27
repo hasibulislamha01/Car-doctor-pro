@@ -52,7 +52,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="min-h-screen flex flex-col items-center justify-center gap-6 text-white bg-slate-800 bg-opacity-90 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="min-h-screen flex flex-col items-center justify-center gap-6 text-white bg-slate-800 menu menu-sm dropdown-content rounded-box z-50 mt-3 w-52 p-2 shadow">
                             {
                                 navItems?.map(items =>
                                     <Link href={items.link}>{items.title}</Link>
